@@ -13,12 +13,12 @@ const useExchangeRates = () => {
         const response = await fetch('/api', {//se llama a la api del archivo vite.config.js
           method: 'GET',
           headers: {
-            'Content-Type': 'application/json',  // Corrección aquí
+            'Content-Type': 'application/json', 
           },
         });
 
         if (!response.ok) {
-          throw new Error('Error al obtener los datos');  // Corrección aquí
+          throw new Error('Error al obtener los datos'); 
         }
 
         const data = await response.json();

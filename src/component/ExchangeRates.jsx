@@ -1,6 +1,5 @@
 import React from "react";
-
-//declaro la apí para mas comodidad
+import '../styles/ExchangeRates.css';
 
 function ExchangeRates({rates}){
     return (
@@ -15,11 +14,11 @@ function ExchangeRates({rates}){
               </tr>
             </thead>
             <tbody>
-              {rates.map((rates,index)=>(
+              {rates.map((rate,index)=>(
                 <tr key={index}>
-                  <td>{rates.type}</td>
-                  <td>{rates.buy}</td>
-                  <td>{rates.sell}</td>
+                  <td>{rate.type}</td>
+                  <td>{rate.buy}</td>
+                  <td>{rate.sell}</td>
                 </tr>
               ))}
             </tbody>
